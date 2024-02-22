@@ -120,9 +120,8 @@ li.hold {
     padding: 15px;
 }
 
-div.col-md-3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+div.col-md-6 {
+    margin-top: 20px;
 }
 
 /* scroll bar style */
@@ -201,4 +200,11 @@ div.col-md-3 {
     background-color: rgba(255, 255, 255, 0.9);
     min-height: 100px;
     display: none
+}
+
+/* Madia Query */
+@media screen and (max-width:767px) {
+    body {
+        background: url("../image/wallpaper.jpg");
+    }
 }
