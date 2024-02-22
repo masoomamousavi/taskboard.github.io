@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="mt-3">Task Board</h1>
+    <div class="container-fluid mt-5">
+        <ul class="drag-list">
+            <div class="row drag-items-list">
+                <div class="col-md-3">
+                    <!-- Backlog column -->
+                    <li class="backlog rounded drag-column">
+                        <span class="backlog-header">
+                            <h1>backlog </h1>
+                        </span>
+                        <!-- backlog items -->
+                        <div id="backlog-items" class="custom-scroll">
+                            <ul class="drag-items" id="backlog-list" ondrop="drop(event)" ondragover="allowDrop(event)"
+                                ondragenter="dragEnter(0)">
+                            </ul>
+                        </div>
+                        <!-- buttons -->
+                        <div class="btn-group">
+                            <div class="add-btn" onclick="showBox(0)">
+                                <span class="plus">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideBox(0)">
+                                <span>Save Item</span>
+                            </div>
+                        </div>
+                        <div class="add-container">
+                            <div class="add-item" contenteditable="true">
+
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="col-md-3">
+                    <!-- progress column -->
+                    <li class="progress1 rounded drag-column">
+                        <span class="progress-header">
+                            <h1>In Progress </h1>
+                        </span>
+                        <!-- progress items -->
+                        <div id="progress-items" class="custom-scroll">
+                            <ul class="drag-items" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)"
+                                ondragenter="dragEnter(1)"></ul>
+                        </div>
+                        <!-- buttons -->
+                        <div class="btn-group">
+                            <div class="add-btn" onclick="showBox(1)">
+                                <span class="plus">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideBox(1)">
+                                <span>Save Item</span>
+                            </div>
+                        </div>
+                        <div class="add-container">
+                            <div class="add-item" contenteditable="true">
+
+                            </div>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="col-md-3">
+                    <!-- complete column -->
+                    <li class="complete rounded drag-column">
+                        <span class="complete-header">
+                            <h1>complete </h1>
+                        </span>
+                        <!-- complete items -->
+                        <div id="complete-items" class="custom-scroll">
+                            <ul class="drag-items" id="complete-list" ondrop="drop(event)" ondragover="allowDrop(event)"
+                                ondragenter="dragEnter(2)"></ul>
+                        </div>
+                        <!-- buttons -->
+                        <div class="btn-group">
+                            <div class="add-btn" onclick="showBox(2)">
+                                <span class="plus">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideBox(2)">
+                                <span>Save Item</span>
+                            </div>
+                        </div>
+                        <div class="add-container">
+                            <div class="add-item" contenteditable="true">
+
+                            </div>
+                        </div>
+
+                    </li>
+                </div>
+
+                <div class="col-md-3">
+                    <!-- hold column -->
+                    <li class="hold rounded drag-column">
+                        <span class="hold-header">
+                            <h1>In Hold </h1>
+                        </span>
+                        <!-- hold items -->
+                        <div id="hold-items" class="custom-scroll">
+                            <ul class="drag-items" id="hold-list" ondrop="drop(event)" ondragover="allowDrop(event)"
+                                ondragenter="dragEnter(3)">
+                            </ul>
+                        </div>
+                        <!-- buttons -->
+                        <div class="btn-group">
+                            <div class="add-btn" onclick="showBox(3)">
+                                <span class="plus">+</span>
+                                <span>Add Item</span>
+                            </div>
+                            <div class="add-btn solid" onclick="hideBox(3)">
+                                <span>Save Item</span>
+                            </div>
+                        </div>
+                        <div class="add-container">
+                            <div class="add-item" contenteditable="true">
+
+                            </div>
+                        </div>
+
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
