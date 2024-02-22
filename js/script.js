@@ -120,7 +120,9 @@ function updateItem(id, column) {
 function addToColumn(column) {
     const itemText = addItem[column].textContent;
     const selectedArray = arrayList[column];
-    selectedArray.push(itemText);
+    if (itemText !== '') {
+        selectedArray.push(itemText);
+    }
     addItem[column].textContent = '';
     updateDom(column);
 }
